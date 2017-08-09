@@ -1,0 +1,18 @@
+{
+    "installed_packages":
+    [
+        "A File Icon",
+        "CursorRuler",
+        "File History",
+        "Git",
+        "JSHint",
+        "Package Control",
+        "SCSS",
+        "SublimeLinter",
+        "SublimeLinter-annotations",
+        "SublimeLinter-flake8",
+        "SublimeLinter-jshint",
+        "Theme - Soda",
+        "TypeScript"
+    ]
+}

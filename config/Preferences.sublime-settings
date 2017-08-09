@@ -1,0 +1,54 @@
+{
+	"bold_folder_labels": true,
+	"color_scheme": "Packages/User/SublimeLinter/Custom Blackboard (SL).tmTheme",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.min.js",
+		"*.min.css",
+		"*/zxcvbn/*",
+		"zxcvbn.js",
+		"angular1*",
+		"angular2*",
+		"*.map",
+		"dependencies.js",
+		"*/@angular/*",
+		"angular.js",
+		"typescript*",
+		"tsserver*",
+		"_data.js",
+		"tsc.js",
+		"fixtures.json",
+		"standalone-response.xml",
+		"typingsInstaller.js",
+		"app.js",
+		"*/node_modules/*",
+		"*/.happypack/*",
+		"main.css",
+		"*/woosh-spa/frontend/dist/*",
+		"*/woosh-spa/frontend/app/vendor/*",
+		"*/.coverage",
+		"nosetests.xml",
+		"*/qa_campaign_stats/json/*",
+		"*/qa_stats/json/*",
+		"deletion_notes.txt"
+	],
+	"find_selected_text": true,
+	"font_face": "mononoki",
+	"font_size": 13,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"line_padding_bottom": 1,
+	"line_padding_top": 1,
+	"rulers":
+	[
+		80
+	],
+	"scroll_past_end": true,
+	"theme": "Soda Dark 3.sublime-theme"
+}
