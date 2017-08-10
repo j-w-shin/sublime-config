@@ -2,17 +2,21 @@
     "installed_packages":
     [
         "A File Icon",
+        "BracketHighlighter",
         "CursorRuler",
         "File History",
         "Git",
+        "GitGutter",
         "JSHint",
         "Package Control",
+        "PackageResourceViewer",
         "SCSS",
         "SublimeLinter",
         "SublimeLinter-annotations",
         "SublimeLinter-flake8",
         "SublimeLinter-jshint",
         "Theme - Soda",
-        "TypeScript"
+        "TypeScript",
+        "WordHighlight"
     ]
 }

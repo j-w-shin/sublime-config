@@ -1,0 +1,20 @@
+[
+// -------------------------------------------------------------------------
+  // Auto-complete behaviour for ), ], '', ""
+  // Bind to ,  to step over the auto-completed character(s)
+  // -------------------------------------------------------------------------
+  { "keys": ["enter"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+    [
+        { "key": "following_text", "operator": "regex_contains", "operand": "^[)\\]'\"]", "match_all": true },
+        { "key": "preceding_text", "operator": "regex_contains", "operand": "[(['\"]", "match_all": true },
+        { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+    ]
+  },
+  { "keys": ["tab"], "command": "move", "args": {"by": "characters", "forward": true}, "context":
+    [
+        { "key": "following_text", "operator": "regex_contains", "operand": "^[)\\]'\"]", "match_all": true },
+        { "key": "preceding_text", "operator": "regex_contains", "operand": "[(['\"]", "match_all": true },
+        { "key": "auto_complete_visible", "operator": "equal", "operand": false }
+    ]
+  }
+]
