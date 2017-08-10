@@ -1,7 +1,10 @@
 {
+	"auto_match_enabled": true,
 	"bold_folder_labels": true,
+	"close_windows_when_empty": true,
 	"color_scheme": "Packages/User/SublimeLinter/Custom Blackboard (SL).tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		"*.pyc",
@@ -32,23 +35,27 @@
 		"nosetests.xml",
 		"*/qa_campaign_stats/json/*",
 		"*/qa_stats/json/*",
-		"deletion_notes.txt"
 	],
 	"find_selected_text": true,
 	"font_face": "mononoki",
 	"font_size": 13,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"hot_exit": false,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"remember_open_files": false,
 	"rulers":
 	[
 		80
 	],
 	"scroll_past_end": true,
+	"soda_folder_icons": true,
 	"theme": "Soda Dark 3.sublime-theme"
+	"translate_tabs_to_spaces": true,
+	"word_wrap": true
 }
