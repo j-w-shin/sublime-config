@@ -1,23 +1,36 @@
 #!/usr/bin/env bash
 
-function usage {
-   cat << EOF
-usage: install.sh <theme>
-    theme: boron (default), black
-EOF
-   exit 1
+usage() { 
+    echo "Usage: $0 [-c <|90>] [-l <string>]" 1>&2; exit 1; 
 }
 
-if [ $# -gt 0 ]; then
-   usage;
+while getopts ":c:l:" opt; do
+    case "${opt}" in
+        c)
+            color=${OPTARG}
+            ((color == boron || color == black)) || usage
+            ;;
+        l)
+            location=${OPTARG}
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+
+if [ -z "${color}" ] || [ -z "${location}" ]; then
+    usage
 fi
+
+echo "c = ${color}"
+echo "l = ${location}"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo "Linux setup"
-elif [[ "$OSTYPE" == "darwin" || "$OSTYPE" == "darwin15" ]]; then
+elif [[ "$OSTYPE" == *"darwin"* ]]; then
     echo "OSX setup"
 else
-    echo "unsupported platform, aborting..."
+    echo "unsupported platform $OSTYPE, aborting..."
 fi
-
-

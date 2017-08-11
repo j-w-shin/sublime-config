@@ -11,6 +11,17 @@
   <key>settings</key>
   <array>
     <dict>
+      <key>name</key>
+        <string>Text and Source Base Colors</string>
+      <key>scope</key>
+        <string>text, source</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#e8e8d3</string>
+      </dict>
+    </dict>
+    <dict>
       <key>settings</key>
       <dict>
         <key>background</key>
@@ -18,13 +29,13 @@
         <key>caret</key>
         <string>#b0d0f0</string>
         <key>foreground</key>
-        <string>#e8e8d3</string>
+        <string>#63634f</string>
         <key>invisibles</key>
-        <string>#e8e8d3</string>
+        <string>#828353</string>
         <key>selection</key>
         <string>#404040</string>
         <key>lineHighlight</key>
-        <string>#010101</string>
+        <string>#292924</string>
         <key>gutterForeground</key>
         <string>#373737</string>
       </dict>
@@ -152,6 +163,21 @@
 
     <dict>
       <key>name</key>
+<<<<<<< HEAD
+=======
+      <string>Storage</string>
+      <key>scope</key>
+      <string>storage</string>
+      <key>settings</key>
+      <dict>
+        <key>foreground</key>
+        <string>#8fbfdc</string>
+      </dict>
+    </dict>
+
+    <dict>
+      <key>name</key>
+>>>>>>> 1a5a75216e17b50cd0d4c4f7547a75af4a17ed15
       <string>Diff insertion</string>
       <key>scope</key>
       <string>diff.inserted, markup.inserted</string>
@@ -216,6 +242,7 @@
 
   <dict>
             <key>name</key>
+<<<<<<< HEAD
             <string>SublimeLinter Warning</string>
             <key>scope</key>
             <string>sublimelinter.mark.warning</string>
@@ -243,9 +270,42 @@
             <dict>
                 <key>foreground</key>
                 <string>#D02000</string>
+=======
+            <string>SublimeLinter Error</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#D02000</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Warning</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.warning</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#DDB700</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Gutter Mark</string>
+            <key>scope</key>
+            <string>sublimelinter.gutter-mark</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#FFFFFF</string>
+>>>>>>> 1a5a75216e17b50cd0d4c4f7547a75af4a17ed15
             </dict>
         </dict></array>
   <key>uuid</key>
   <string>4e4cdb00-2fb2-11e2-81c1-0800200c9a66</string>
 </dict>
+<<<<<<< HEAD
 </plist>
+=======
+</plist>
+>>>>>>> 1a5a75216e17b50cd0d4c4f7547a75af4a17ed15
