@@ -1,36 +1,57 @@
 #!/usr/bin/env bash
 
 usage() { 
-    echo "Usage: $0 [-c <|90>] [-l <string>]" 1>&2; exit 1; 
+    echo "usage: $0 [-c <boron|black>] [-l <location>]
+
+    -c      sublime theme color: black, boron
+    -l      specify the location of your sublime text 3 folder
+" 1>&2; exit 1; 
 }
 
-while getopts ":c:l:" opt; do
-    case "${opt}" in
-        c)
-            color=${OPTARG}
-            ((color == boron || color == black)) || usage
-            ;;
-        l)
-            location=${OPTARG}
-            ;;
-        *)
+LOCATION=""
+COLOR="Boron"
+
+while true; do
+    case $1 in
+        -h)
+            usage ;;
+        -c)
+            shift
+            case $1 in
+                boron) shift ;;
+                black) COLOR="Black"; shift ;;
+                *) usage; exit 1 ;;
+            esac ;;
+        -l)
+            shift
+            LOCATION=$1
+            shift ;;
+        -*) 
+            echo "error: unrecognized option $1" >&2
             usage
-            ;;
+            exit 2 ;;
+        *)
+            break ;;
     esac
 done
-shift $((OPTIND-1))
-
-if [ -z "${color}" ] || [ -z "${location}" ]; then
-    usage
-fi
-
-echo "c = ${color}"
-echo "l = ${location}"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
     echo "Linux setup"
+    ENV="Linux"
+    if [[ "$LOCATION"=="" ]]; then
+        LOCATION="$HOME/.config/sublime-text-3"
+    fi
 elif [[ "$OSTYPE" == *"darwin"* ]]; then
     echo "OSX setup"
+    ENV="OSX"
 else
     echo "unsupported platform $OSTYPE, aborting..."
 fi
+
+echo -n "Installing..."
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+cp  "$DIR/config/$COLOR.tmTheme" "$LOCATION/Packages/User"
+
+
+echo " done."
